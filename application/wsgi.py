@@ -1,5 +1,3 @@
-from api import app
-
 from flask import Flask
 
 application = Flask(__name__)
