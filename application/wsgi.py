@@ -1,11 +1,9 @@
-import os
-import sys
-
-try:
-    os.chdir(os.path.dirname(sys.argv[0]))
-except OSError:
-    pass
-
 from api import app
 
-application = app
+from flask import Flask
+
+application = Flask(__name__)
+
+@app.route("/api/")
+def hello_world():
+    return "<p>Hello, World!</p>"
